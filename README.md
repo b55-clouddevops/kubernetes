@@ -126,3 +126,32 @@ Annotations in kubernetes allows pods to have labels with special characters and
 
 They are primarily used to add some extra power or features to your resources.
 ```
+
+
+
+
+### How to create a Kubernetes Cluster on AWS ?
+We can use a Managed Service called EKS : Elastic Kubernetes Service
+
+
+1) Ensure you have VPC In Place ( network )
+2) Create the cluster 
+3) Create Nodepools
+
+
+### You can create cluster by using any of the below ways : 
+
+```
+    1) Manually   [ on aws console ]
+    2) EKSCTL     [ Utility from Weaveworks ]
+    3) Terraform  
+```
+
+
+In AWS, EKS Cluster can be of 3 types : 
+
+```
+    1) Public                ( You can access the cluster from public and traffic from Master to Work Nodes will be over  internet )
+    2) Public and Private    ( You can access the cluster from the public, but traffic from master to worker will be over intranet)
+    3) Private               ( You can access it only with in the network and traffic between the nodes and master are strictly with in the VPC )
+```
