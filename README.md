@@ -27,9 +27,23 @@ POD's are the smallest units in Kubernetes. POD is a wrapper to your container w
 
 ```
 YES! If two containers are working closely together, then we can use the multi-container pods, which was solved by K8 and that's main advantage.
+
 All the containers in a pod will have common network stack and storage which results in high performance for apps that needs common network storage.
+
+Containers won't be having IP irrespective of their count and it all goes by the POD IP Only.
 ```
 
+### How can we create the resources in kubernetes ?
+
+Kubernetes resources can be created in 2 ways : 
+
+```
+    1) Imerative Approach   [ Creating by running the direct commands ]
+
+            ex:  kubectl run nginx-pod  --image=nginx
+
+    2) Declarative Approach [ Creating by using the YAML : Suggested ]
+```
 
 
 ### kubenetes commands 
@@ -154,4 +168,18 @@ In AWS, EKS Cluster can be of 3 types :
     1) Public                ( You can access the cluster from public and traffic from Master to Work Nodes will be over  internet )
     2) Public and Private    ( You can access the cluster from the public, but traffic from master to worker will be over intranet)
     3) Private               ( You can access it only with in the network and traffic between the nodes and master are strictly with in the VPC )
+```
+
+
+# How do you upgrade your Kuberntes Cluster ?
+
+```
+It goes in 2 steps : 
+    1) Upgrade your master to 1.25 ---> 1.26 
+    2) Upgrade your worker nodes / nodePools from 1.25 yo 1.26
+
+How this upgrade really happens in the background ?
+
+    1) It goes by rolling update.
+    2) 1.26 nodes comes up, deltes one node.
 ```
