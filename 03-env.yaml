@@ -1,0 +1,18 @@
+# Multi Container Pod 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-3 
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx:latest
+    env: 
+      - name: BATCH
+        value: 55 
+      - name: ENVIRONMENT
+        value: dev 
+      - name: MONGO_URL
+        value: mongo.corp.cc 
+      - name: BU 
+        value: ecomm

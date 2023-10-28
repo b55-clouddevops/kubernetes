@@ -128,7 +128,7 @@ It helps avoid naming conflicts and enhances clarity in a shared environment.
 # ALL THE ABOVE VAB BE FULFILLED BY USING SETS!!!!
 
 ```
-In Kubernetes, we don't run any of resources diectly as POD's as they are not manture enough enough to be maintained.
+In Kubernetes, we don't run / create any of resources diectly as POD's as they are not manture enough to be maintained.
 Instead, we run SET's and set's will take care of all the above 3 points.
 ```
 
