@@ -8,4 +8,4 @@ spec:
   - name: nginx-container
     image: nginx:latest
   - name: busybox-container
-    images: busybox
+    image: busybox
