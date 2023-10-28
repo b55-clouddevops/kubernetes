@@ -76,6 +76,16 @@ We can create resources in kubernetes by using any of the following approaches.
     2) Declarative  [ Recommented Apporach : Everything will be in code using YAML ]
 ```
 
+### kubectl apply -f vs create -f ?
+
+```
+Both apply and create has the capabilitiy to create the resources mentioned in the mainfest.yaml
+
+create just creates the resources if the resource is not available whilst apply even creates the resources of they are not available.
+If they are available, it's going to apply the changes.
+
+```
+
 
 # What is a namespace in kubernetes ?
 
