@@ -9,7 +9,7 @@ spec:
     image: nginx:latest
     env: 
     - name: BATCH
-      value: 55 
+      value: "55" 
     - name: ENVIRONMENT
       value: dev 
     - name: MONGO_URL
