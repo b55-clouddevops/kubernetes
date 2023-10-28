@@ -8,11 +8,11 @@ spec:
   - name: nginx-container
     image: nginx:latest
     env: 
-      - name: BATCH
-        value: 55 
-      - name: ENVIRONMENT
-        value: dev 
-      - name: MONGO_URL
-        value: mongo.corp.cc 
-      - name: BU 
-        value: ecomm
+    - name: BATCH
+      value: 55 
+    - name: ENVIRONMENT
+      value: dev 
+    - name: MONGO_URL
+      value: mongo.corp.cc 
+    - name: BU 
+      value: ecomm
