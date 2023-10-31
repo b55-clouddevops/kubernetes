@@ -9,7 +9,6 @@ data:
   APP: ecomm  
 
 --- 
-
 apiVersion: v1
 kind: Pod
 metadata:
