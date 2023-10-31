@@ -32,7 +32,7 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: goproxy-readinesProbe
+  name: goproxy-readinesprobe
   labels:
     app: goproxy
 spec:
