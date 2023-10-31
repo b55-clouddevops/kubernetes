@@ -11,7 +11,6 @@
 # Ensure pod 100% should be less than 80% of the node size.
 # If pod is not able to find the node as per it's limits and requests, POD will stay in the pending state.
 
-
 apiVersion: v1
 kind: Pod
 metadata:
@@ -29,7 +28,6 @@ spec:
         cpu: "500m"
 
 --- 
-
 apiVersion: v1
 kind: Pod
 metadata:
