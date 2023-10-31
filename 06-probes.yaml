@@ -26,4 +26,28 @@ spec:
         - cat
         - /tmp/healthy
       initialDelaySeconds: 5
-      periodSeconds: 5
+      periodSeconds: 5 
+
+--- 
+apiVersion: v1
+kind: Pod
+metadata:
+  name: goproxy-readinesProbe
+  labels:
+    app: goproxy
+spec:
+  containers:
+  - name: goproxy
+    image: registry.k8s.io/goproxy:0.1
+    ports:
+    - containerPort: 8080
+    readinessProbe:
+      tcpSocket:
+        port: 8080
+      initialDelaySeconds: 15
+      periodSeconds: 10
+    livenessProbe:
+      tcpSocket:
+        port: 8080
+      initialDelaySeconds: 15
+      periodSeconds: 10
