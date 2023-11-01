@@ -24,6 +24,7 @@ spec:
         ports:
         - containerPort: 80
 
+# Cluster IP Svc
 # --- 
 # apiVersion: v1
 # kind: Service
@@ -37,6 +38,8 @@ spec:
 #       port: 80
 #       targetPort: 80
 
+
+# Load Balancer Svc
 --- 
 apiVersion: v1
 kind: Service
@@ -50,3 +53,19 @@ spec:
       port: 80
       targetPort: 80
   type: LoadBalancer
+
+--- 
+# NodePort SVc
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: my-service
+# spec:
+#   type: NodePort
+#   selector:
+#     appp: nginx
+#   ports:
+#     - port: 80                
+#       targetPort: 80
+#       # will allocate a port from a range (default: 30000-32767)
+#       nodePort: 30007      # Port number which would be reaching the k8 node
